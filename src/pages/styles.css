@@ -1,0 +1,19 @@
+body {
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 20px 20px 60px;
+}
+
+.try {
+  .spinner {
+    margin: 100px auto;
+    transform-origin: center center;
+    width: 40px;
+  }
+}
+
+.test {
+  background-color: #fff;
+  font-size: 1rem;
+}
