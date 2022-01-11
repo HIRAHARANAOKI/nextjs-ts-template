@@ -7,8 +7,14 @@
     "type-check": "tsc",
     "lint": "next lint",
     "lint:css": "stylelint src/**/*.{css,scss}",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json}'",
     "format:css": "stylelint src/**/*.{css,scss} --fix"
+  },
+  "husks": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run lint:css && npm run format && npm run format:css",
+      "pre-push": "npm run lint && npm run lint:css && npm run format && npm run format:css"
+    }
   },
   "dependencies": {
     "next": "latest",
@@ -22,6 +28,7 @@
     "eslint": "^8.6.0",
     "eslint-config-next": "^12.0.7",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
     "prettier": "^2.5.1",
     "sass": "^1.47.0",
     "stylelint": "^14.2.0",
