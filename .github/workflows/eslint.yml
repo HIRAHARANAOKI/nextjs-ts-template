@@ -1,5 +1,8 @@
-name: reviewdog
-on: [pull_request]
+name: ESLint
+on:
+  pull_request:
+    branches:
+      - develop
 jobs:
   eslint:
     name: runner / eslint
@@ -9,4 +12,5 @@ jobs:
       - uses: reviewdog/action-eslint@v1
         with:
           reporter: github-pr-review
-          eslint_flags: 'src/'
+          eslint_flags: 'src/**/*.{ts,tsx,js,jsx}'
+          fail_on_error: 'true'
