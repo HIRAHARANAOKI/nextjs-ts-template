@@ -10,4 +10,4 @@ jobs:
         with:
           reporter: github-pr-review
           eslint_flags: 'src/'
-          fail_on_error: 'true'　
+          fail_on_error: 'true'
